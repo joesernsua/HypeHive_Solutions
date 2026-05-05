@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="assets/css/styles.css">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+   <link rel="stylesheet" href="assets/css/custom.css">
+   <title>HypeHive Solutions | Marketing Business</title>
+</head>
+
+<body>
+   <!-- ====== Navbar Section Start -->
+   <header x-data="{navbarOpen: false,}" class=" top-0 left-0 z-50 w-full sticky bg-white">
+      <div class="container mx-auto">
+         <div class="relative flex items-center justify-between -mx-4">
+            <div class="max-w-full px-4 w-auto">
+               <a href="#home" class="brand-link text-logo">
+                  HypeHive <span>Solutions</span>
+               </a>
+            </div>
+            <div class="px-4">
+               <div>
+                  <button @click="navbarOpen = !navbarOpen" :class="navbarOpen &amp;&amp; 'navbarTogglerActive'"
+                     id="navbarToggler"
+                     class="absolute right-4 top-1/2 block -translate-y-1/2 rounded-lg px-3 py-[6px] ring-primary focus:ring-2 lg:hidden">
+                     <span class="relative my-[6px] block h-[2px] w-[30px] bg-primary "></span>
+                     <span class="relative my-[6px] block h-[2px] w-[30px] bg-primary"></span>
+                     <span class="relative my-[6px] block h-[2px] w-[30px] bg-primary  selected"></span>
+                  </button>
+                  <nav x-transition="" :class="!navbarOpen &amp;&amp; 'hidden'" id="navbarCollapse"
+                     class="absolute right-4 top-full w-full max-w-[350px] rounded-lg bg-white -2 py-5 px-6 lg:px-0 shadow transition-all lg:static lg:bg-transparent  lg:block lg:w-full lg:max-w-full lg:shadow-none xl:ml-11">
+                     <ul class="block lg:flex">
+                        <li>
+                           <a href="#home"
+                              class="flex py-2 text-base font-medium text-dark  hover:text-primary lg:ml-10 lg:inline-flex">
+                              Home
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#about"
+                              class="flex py-2 text-base font-medium text-dark  hover:text-primary lg:ml-10 lg:inline-flex">
+                              About
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#features"
+                              class="flex py-2 text-base font-medium text-dark  hover:text-primary lg:ml-10 lg:inline-flex">
+                              Services
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#strategy"
+                              class="flex py-2 text-base font-medium text-dark  hover:text-primary lg:ml-10 lg:inline-flex">
+                              Strategy
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#testimonials"
+                              class="flex py-2 text-base font-medium text-dark  hover:text-primary lg:ml-10 lg:inline-flex">
+                              Campaigns
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#getstarted"
+                              class="flex py-2 text-base font-medium text-dark  hover:text-primary lg:ml-10 lg:inline-flex">
+                              Contact
+                           </a>
+                        </li>
+                     </ul>
+                  </nav>
+               </div>
+            </div>
+         </div>
+      </div>
+   </header>
+   <!-- ====== Navbar Section End -->
+   <!-- ====== Hero Section Start -->
+   <div id="home" class="relative bg-white  pt-[120px] pb-[110px] lg:pt-[150px]">
+      <div class="container mx-auto">
+         <div class="flex flex-wrap items-center -mx-4">
+            <div class="w-full px-4 lg:w-5/12">
+               <div class="hero-content">
+                  <h1
+                     class="mb-5 text-4xl font-bold !leading-[1.208] text-dark  sm:text-[42px] lg:text-[40px] xl:text-5xl">
+                     Marketing That Gets<br>
+                     Small Brands Noticed.
+                  </h1>
+                  <p class="mb-8 max-w-[480px] text-base text-body-color ">
+                     HypeHive Solutions is a creative digital agency helping small businesses and startups grow their
+                     online presence with social media management, content creation, branding, and marketing strategy.
+                  </p>
+                  <ul class="flex flex-wrap items-center">
+                     <li>
+                        <a href="#getstarted"
+                           class="inline-flex items-center border justify-center px-6 py-3 text-base font-medium text-center text-white hover:text-primary rounded-md bg-primary hover:bg-transparent hover:border-primary lg:px-7">
+                           Grow Your Brand
+                        </a>
+                     </li>
+                     <li>
+                        <a href="#features"
+                           class="inline-flex items-center justify-center py-3 px-5 text-center text-base font-medium text-[#464646]  hover:text-primary">
+                           <span class="mr-2">
+                              <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                 <circle cx="12" cy="12.6152" r="12" fill="#3758F9"></circle>
+                                 <rect x="7.99893" y="14.979" width="8.18182" height="1.63636" fill="white"></rect>
+                                 <rect x="11.2717" y="7.61523" width="1.63636" height="4.09091" fill="white"></rect>
+                                 <path d="M12.0898 14.1606L14.9241 11.0925H9.25557L12.0898 14.1606Z" fill="white">
+                                 </path>
+                              </svg>
+                           </span>
+                           View Services
+                        </a>
+                     </li>
+                  </ul>
+                  <div class="clients pt-16">
+                     <h6 class="flex items-center mb-6 text-md font-normal text-body-color ">
+                        Built for growing businesses
+                        <span class="inline-block w-8 h-px ml-3 bg-body-color"></span>
+                     </h6>
+                     <div class="flex items-center">
+                        <div class="block py-3 mr-4">
+                           <span class="text-sm font-semibold text-dark">Small Businesses</span>
+                        </div>
+                        <div class="block py-3 mr-4">
+                           <span class="text-sm font-semibold text-dark">Startups</span>
+                        </div>
+                        <div class="block py-3">
+                           <span class="text-sm font-semibold text-dark">Online Sellers</span>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="hidden px-4 lg:block lg:w-1/12"></div>
+            <div class="w-full px-4 lg:w-6/12">
+               <div class="lg:ml-auto lg:text-right">
+                  <div class="relative z-10 inline-block pt-11 lg:pt-0">
+                     <div class="hypehive-hero-logo">
+                        <img src="./assets/images/hypehive-logo-transparent.png" alt="HypeHive Solutions logo" class="hero-brand-logo">
+                     </div>
+                     <span class="absolute -left-8 -bottom-8 z-[-1]">
+                        <svg width="93" height="93" viewBox="0 0 93 93" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <circle cx="2.5" cy="2.5" r="2.5" fill="#3056D3"></circle>
+                           <circle cx="2.5" cy="24.5" r="2.5" fill="#3056D3"></circle>
+                           <circle cx="2.5" cy="46.5" r="2.5" fill="#3056D3"></circle>
+                           <circle cx="2.5" cy="68.5" r="2.5" fill="#3056D3"></circle>
+                           <circle cx="2.5" cy="90.5" r="2.5" fill="#3056D3"></circle>
+                           <circle cx="24.5" cy="2.5" r="2.5" fill="#3056D3"></circle>
+                           <circle cx="24.5" cy="24.5" r="2.5" fill="#3056D3"></circle>
+                           <circle cx="24.5" cy="46.5" r="2.5" fill="#3056D3"></circle>
+                           <circle cx="24.5" cy="68.5" r="2.5" fill="#3056D3"></circle>
+                           <circle cx="24.5" cy="90.5" r="2.5" fill="#3056D3"></circle>
+                           <circle cx="46.5" cy="2.5" r="2.5" fill="#3056D3"></circle>
+                           <circle cx="46.5" cy="24.5" r="2.5" fill="#3056D3"></circle>
+                           <circle cx="46.5" cy="46.5" r="2.5" fill="#3056D3"></circle>
+                           <circle cx="46.5" cy="68.5" r="2.5" fill="#3056D3"></circle>
+                           <circle cx="46.5" cy="90.5" r="2.5" fill="#3056D3"></circle>
+                           <circle cx="68.5" cy="2.5" r="2.5" fill="#3056D3"></circle>
+                           <circle cx="68.5" cy="24.5" r="2.5" fill="#3056D3"></circle>
+                           <circle cx="68.5" cy="46.5" r="2.5" fill="#3056D3"></circle>
+                           <circle cx="68.5" cy="68.5" r="2.5" fill="#3056D3"></circle>
+                           <circle cx="68.5" cy="90.5" r="2.5" fill="#3056D3"></circle>
+                           <circle cx="90.5" cy="2.5" r="2.5" fill="#3056D3"></circle>
+                           <circle cx="90.5" cy="24.5" r="2.5" fill="#3056D3"></circle>
+                           <circle cx="90.5" cy="46.5" r="2.5" fill="#3056D3"></circle>
+                           <circle cx="90.5" cy="68.5" r="2.5" fill="#3056D3"></circle>
+                           <circle cx="90.5" cy="90.5" r="2.5" fill="#3056D3"></circle>
+                        </svg>
+                     </span>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- ====== Hero Section End -->
+   <!-- ====== About Section Start -->
+   <section id="about" class="section-band">
+      <div class="container mx-auto">
+         <div class="section-heading">
+            <span>About The Business</span>
+            <h2>Creative Digital Presence for Growing Brands</h2>
+            <p>
+               HypeHive Solutions is a hypothetical marketing business created under the Marketing Business category.
+               We help small businesses and startups build stronger visibility, engagement, and trust through social
+               media management, content creation, branding, and practical marketing strategies.
+            </p>
+         </div>
+         <div class="business-grid">
+            <div class="info-panel">
+               <h3>Business Overview</h3>
+               <p>
+                  Our agency supports business owners who want to look active and professional online but do not have
+                  enough time, skills, or creative direction to manage their digital presence consistently.
+               </p>
+               <ul>
+                  <li>Category: Finance or Marketing Business</li>
+                  <li>Focus: Social media, branding, and content strategy</li>
+                  <li>Purpose: Increase engagement, visibility, and customer interest</li>
+               </ul>
+            </div>
+            <div class="info-panel">
+               <h3>What Makes Us Useful</h3>
+               <p>
+                  We turn small business ideas into clear posts, reels, stories, campaigns, and brand visuals that
+                  customers can recognize quickly across Instagram, TikTok, and other online platforms.
+               </p>
+               <ul>
+                  <li>Consistent posting schedule</li>
+                  <li>Creative content direction</li>
+                  <li>Simple growth plans with measurable KPIs</li>
+               </ul>
+            </div>
+         </div>
+      </div>
+   </section>
+   <!-- ====== About Section End -->
+   <!-- ====== Branding Section Start -->
+   <section id="branding" class="section-band section-band-white">
+      <div class="container mx-auto">
+         <div class="section-heading">
+            <span>Logo &amp; Branding Visuals</span>
+            <h2>Yellow, Bold, Creative, Memorable</h2>
+            <p>
+               The HypeHive brand uses a bee and honeycomb concept to represent energy, creativity, teamwork, and
+               growth. The yellow and black palette creates a strong marketing identity that is easy to remember.
+            </p>
+         </div>
+         <div class="brand-showcase">
+            <div class="brand-logo-panel">
+               <img src="./assets/images/hypehive-logo-transparent.png" alt="HypeHive Solutions logo">
+            </div>
+            <div class="brand-details">
+               <h3>Brand Identity</h3>
+               <p class="brand-tagline">Grow. Create. Inspire.</p>
+               <p>
+                  HypeHive Solutions is designed to feel energetic, friendly, and professional. The brand is suitable
+                  for small businesses that want a creative partner to improve their online presence.
+               </p>
+               <div class="brand-colors">
+                  <div class="color-chip">
+                     <span class="chip chip-yellow"></span>
+                     <strong>Honey Yellow</strong>
+                     <small>#F59E0B</small>
+                  </div>
+                  <div class="color-chip">
+                     <span class="chip chip-amber"></span>
+                     <strong>Deep Amber</strong>
+                     <small>#B45309</small>
+                  </div>
+                  <div class="color-chip">
+                     <span class="chip chip-black"></span>
+                     <strong>Hive Black</strong>
+                     <small>#1F1300</small>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <!-- ====== Branding Section End -->
+   <!-- ====== Services Section Start -->
+   <section id="features" class="pt-20 pb-12 lg:pt-[120px] lg:pb-[90px] ">
+      <div class="container mx-auto">
+         <div class="-mx-4 flex flex-wrap">
+            <div class="w-full px-4">
+               <div class="mx-auto mb-12 max-w-[510px] text-center lg:mb-20">
+                  <span class="text-primary mb-2 block text-lg font-semibold">
+                     Our Services
+                  </span>
+                  <h2 class="text-dark  mb-3 text-3xl leading-[1.2] font-bold sm:text-4xl md:text-[40px]">
+                     Creative Marketing for Online Growth
+                  </h2>
+                  <p class="text-body-color text-base ">
+                     We help brands stay active, look professional, and reach the right people through consistent
+                     social content, clear branding, and practical growth strategies.
+                  </p>
+               </div>
+            </div>
+         </div>
+         <div class="-mx-4 flex flex-wrap">
+            <div class="w-full px-4 md:w-1/2 lg:w-1/3">
+               <div class="mb-9 rounded-[20px] bg-white -2 p-10 shadow-2 hover:shadow-lg md:px-7 xl:px-10">
+                  <div class="bg-primary mb-8 flex h-[70px] w-[70px] items-center justify-center rounded-2xl">
+                     <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                           d="M21.0375 1.2374C11.8125 -0.393851 2.92503 5.7374 1.29378 14.9624C0.450029 19.4061 1.46253 23.9624 4.05003 27.6749C6.63753 31.4436 10.5188 33.9186 14.9625 34.7624C15.975 34.9311 16.9875 35.0436 18 35.0436C26.0438 35.0436 33.2438 29.2499 34.7625 21.0374C36.3938 11.8124 30.2625 2.9249 21.0375 1.2374ZM32.2313 20.5874C32.175 21.0374 32.0625 21.4874 31.95 21.8811L19.2375 17.0999V3.5999C19.6875 3.65615 20.1375 3.7124 20.5313 3.76865C28.4063 5.1749 33.6375 12.7124 32.2313 20.5874ZM16.7063 3.5999V16.7624H3.60003C3.65628 16.3124 3.71253 15.8624 3.76878 15.4124C4.95003 8.83115 10.4063 4.10615 16.7063 3.5999ZM15.4125 32.2311C11.5875 31.5561 8.32503 29.4186 6.13128 26.2124C4.66878 24.1311 3.82503 21.7124 3.60003 19.2374H17.775L31.05 24.2436C28.2938 29.9811 21.9375 33.4686 15.4125 32.2311Z"
+                           fill="white"></path>
+                     </svg>
+                  </div>
+                  <h4 class="text-dark  mb-4 text-2xl font-semibold">
+                     Social Media Management
+                  </h4>
+                  <p class="text-body-color ">
+                     We manage Instagram and TikTok accounts for busy business owners. For example, a small cake shop
+                     that cannot post every day can rely on us to schedule posts, reply to comments, and keep the brand active.
+                  </p>
+               </div>
+            </div>
+            <div class="w-full px-4 md:w-1/2 lg:w-1/3">
+               <div class="mb-9 rounded-[20px] bg-white -2 p-10 shadow-2 hover:shadow-lg md:px-7 xl:px-10">
+                  <div class="bg-primary mb-8 flex h-[70px] w-[70px] items-center justify-center rounded-2xl">
+                     <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                           d="M9.89195 14.625C10.9995 10.1252 13.769 7.875 18.1996 7.875C24.8458 7.875 25.6765 12.9375 28.9996 13.7812C31.2151 14.3439 33.1535 13.5002 34.815 11.25C33.7075 15.7498 30.9379 18 26.5073 18C19.8611 18 19.0304 12.9375 15.7073 12.0938C13.4918 11.5311 11.5535 12.3748 9.89195 14.625ZM1.58423 24.75C2.69174 20.2502 5.46132 18 9.89195 18C16.5381 18 17.3689 23.0625 20.692 23.9062C22.9075 24.4689 24.8458 23.6252 26.5073 21.375C25.3998 25.8748 22.6302 28.125 18.1996 28.125C11.5535 28.125 10.7227 23.0625 7.39963 22.2188C5.18405 21.6561 3.24576 22.4998 1.58423 24.75Z"
+                           fill="white"></path>
+                     </svg>
+                  </div>
+                  <h4 class="text-dark  mb-4 text-2xl font-semibold">
+                     Content Creation
+                  </h4>
+                  <p class="text-body-color ">
+                     We create posts, reels, and stories that make promotions easier to notice. For a bubble tea shop
+                     launching a new drink, we can design the IG post and produce a reel that highlights the product.
+                  </p>
+               </div>
+            </div>
+            <div class="w-full px-4 md:w-1/2 lg:w-1/3">
+               <div class="mb-9 rounded-[20px] bg-white -2 p-10 shadow-2 hover:shadow-lg md:px-7 xl:px-10">
+                  <div class="bg-primary mb-8 flex h-[70px] w-[70px] items-center justify-center rounded-2xl">
+                     <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                           d="M12.2063 1.9126H5.0625C3.15 1.9126 1.575 3.4876 1.575 5.4001V12.5438C1.575 14.4563 3.15 16.0313 5.0625 16.0313H12.2063C14.1188 16.0313 15.6938 14.4563 15.6938 12.5438V5.45635C15.75 3.4876 14.175 1.9126 12.2063 1.9126ZM13.2188 12.6001C13.2188 13.1626 12.7688 13.6126 12.2063 13.6126H5.0625C4.5 13.6126 4.05 13.1626 4.05 12.6001V5.45635C4.05 4.89385 4.5 4.44385 5.0625 4.44385H12.2063C12.7688 4.44385 13.2188 4.89385 13.2188 5.45635V12.6001Z"
+                           fill="white"></path>
+                        <path
+                           d="M30.9375 1.9126H23.7937C21.8812 1.9126 20.3062 3.4876 20.3062 5.4001V12.5438C20.3062 14.4563 21.8812 16.0313 23.7937 16.0313H30.9375C32.85 16.0313 34.425 14.4563 34.425 12.5438V5.45635C34.425 3.4876 32.85 1.9126 30.9375 1.9126ZM31.95 12.6001C31.95 13.1626 31.5 13.6126 30.9375 13.6126H23.7937C23.2312 13.6126 22.7812 13.1626 22.7812 12.6001V5.45635C22.7812 4.89385 23.2312 4.44385 23.7937 4.44385H30.9375C31.5 4.44385 31.95 4.89385 31.95 5.45635V12.6001Z"
+                           fill="white"></path>
+                        <path
+                           d="M12.2063 19.8564H5.0625C3.15 19.8564 1.575 21.4314 1.575 23.3439V30.4877C1.575 32.4002 3.15 33.9752 5.0625 33.9752H12.2063C14.1188 33.9752 15.6938 32.4002 15.6938 30.4877V23.4002C15.75 21.4314 14.175 19.8564 12.2063 19.8564ZM13.2188 30.5439C13.2188 31.1064 12.7688 31.5564 12.2063 31.5564H5.0625C4.5 31.5564 4.05 31.1064 4.05 30.5439V23.4002C4.05 22.8377 4.5 22.3877 5.0625 22.3877H12.2063C12.7688 22.3877 13.2188 22.8377 13.2188 23.4002V30.5439Z"
+                           fill="white"></path>
+                        <path
+                           d="M30.9375 19.8564H23.7937C21.8812 19.8564 20.3062 21.4314 20.3062 23.3439V30.4877C20.3062 32.4002 21.8812 33.9752 23.7937 33.9752H30.9375C32.85 33.9752 34.425 32.4002 34.425 30.4877V23.4002C34.425 21.4314 32.85 19.8564 30.9375 19.8564ZM31.95 30.5439C31.95 31.1064 31.5 31.5564 30.9375 31.5564H23.7937C23.2312 31.5564 22.7812 31.1064 22.7812 30.5439V23.4002C22.7812 22.8377 23.2312 22.3877 23.7937 22.3877H30.9375C31.5 22.3877 31.95 22.8377 31.95 23.4002V30.5439Z"
+                           fill="white"></path>
+                     </svg>
+                  </div>
+                  <h4 class="text-dark  mb-4 text-2xl font-semibold">
+                     Branding &amp; Design
+                  </h4>
+                  <p class="text-body-color ">
+                     We shape a brand's logo, color direction, and post style so it looks consistent and professional,
+                     especially for online sellers who do not yet have a clear visual identity.
+                  </p>
+               </div>
+            </div>
+            <div class="w-full px-4 md:w-1/2 lg:w-1/3">
+               <div class="mb-9 rounded-[20px] bg-white -2 p-10 shadow-2 hover:shadow-lg md:px-7 xl:px-10">
+                  <div class="bg-primary mb-8 flex h-[70px] w-[70px] items-center justify-center rounded-2xl">
+                     <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                           d="M30.2625 10.6312C27.1688 7.36875 22.8375 5.34375 18 5.34375C8.60626 5.34375 1.01251 12.9937 1.01251 22.3875C1.01251 25.0312 1.63126 27.6187 2.75626 29.925C2.92501 30.2625 3.20626 30.4875 3.54376 30.6C3.65626 30.6 3.71251 30.6562 3.82501 30.6562C3.82501 30.6562 3.82501 30.6562 3.88126 30.6562C3.88126 30.6562 3.88126 30.6562 3.93751 30.6562C3.99376 30.6562 4.05001 30.6562 4.10626 30.6562C4.21876 30.6562 4.38751 30.6 4.50001 30.5437L6.80626 29.4187C7.42501 29.1375 7.70626 28.35 7.36876 27.7312C7.03126 27.1125 6.30001 26.8312 5.68126 27.1687L4.55626 27.7312C3.88126 26.1 3.60001 24.3562 3.54376 22.5562H5.90626C6.58126 22.5562 7.20001 21.9937 7.20001 21.2625C7.20001 20.5312 6.63751 19.9687 5.90626 19.9687H3.71251C4.10626 17.4937 5.17501 15.2437 6.69376 13.3875L8.71876 15.4125C8.94376 15.6375 9.28126 15.8062 9.61876 15.8062C9.95626 15.8062 10.2938 15.6937 10.5188 15.4125C11.025 14.9062 11.025 14.1187 10.5188 13.6125L8.43751 11.5312C10.6875 9.5625 13.5563 8.2125 16.7625 7.9875V11.4187C16.7625 12.0937 17.325 12.7125 18.0563 12.7125C18.7313 12.7125 19.35 12.15 19.35 11.4187V7.9875C22.5 8.26875 25.425 9.5625 27.675 11.5312L26.1 13.1062C25.5938 13.6125 25.5938 14.4 26.1 14.9062C26.325 15.1312 26.6625 15.3 27 15.3C27.3375 15.3 27.675 15.1875 27.9 14.9062L29.4188 13.3875C30.9375 15.2437 31.95 17.4937 32.4 19.9687H30.2063C29.5313 19.9687 28.9125 20.5312 28.9125 21.2625C28.9125 21.9937 29.475 22.5562 30.2063 22.5562H32.5688C32.5688 24.3562 32.2313 26.1 31.5563 27.7875L30.4313 27.225C29.8125 26.8875 29.025 27.1687 28.7438 27.7875C28.4625 28.4062 28.6875 29.1937 29.3063 29.475L31.6125 30.6C31.7813 30.7125 32.0063 30.7125 32.175 30.7125C32.175 30.7125 32.175 30.7125 32.2313 30.7125C32.2313 30.7125 32.2313 30.7125 32.2875 30.7125C32.7375 30.7125 33.1875 30.4312 33.4125 30.0375C34.5938 27.7312 35.1563 25.0875 35.1563 22.5C35.0438 17.8312 33.1875 13.6687 30.2625 10.6312Z"
+                           fill="white"></path>
+                        <path
+                           d="M21.4313 19.3499L17.6625 22.1624C16.9875 22.2749 16.3688 22.6687 15.975 23.2312C15.9188 23.3437 15.8625 23.3999 15.8063 23.5124L15.6938 23.6249H15.75C15.1313 24.8062 15.4688 26.2687 16.5938 27.1124C17.7188 27.8999 19.2375 27.7874 20.1375 26.8312H20.1938L20.25 26.7187C20.3063 26.6624 20.4188 26.5499 20.475 26.4374C20.925 25.8749 21.0375 25.1437 20.9813 24.4687L22.4438 19.9687C22.6125 19.4624 21.9375 19.0124 21.4313 19.3499Z"
+                           fill="white"></path>
+                     </svg>
+                  </div>
+                  <h4 class="text-dark  mb-4 text-2xl font-semibold">
+                     Marketing Strategy
+                  </h4>
+                  <p class="text-body-color ">
+                     We plan smarter ways to grow engagement, followers, and sales. For example, a clothing store can
+                     run weekend promotions and use reels to reach younger audiences.
+                  </p>
+               </div>
+            </div>
+            <div class="w-full px-4 md:w-1/2 lg:w-1/3">
+               <div class="mb-9 rounded-[20px] bg-white -2 p-10 shadow-2 hover:shadow-lg md:px-7 xl:px-10">
+                  <div class="bg-primary mb-8 flex h-[70px] w-[70px] items-center justify-center rounded-2xl">
+                     <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                           d="M30.0937 21.8251L29.6437 21.6001L30.2062 21.2626C31.3312 20.5876 31.95 19.4063 31.95 18.0563C31.95 16.7626 31.2187 15.5813 30.0937 14.9063L28.9125 14.2313L30.2062 13.4438C31.3312 12.7688 31.95 11.5876 31.95 10.2376C31.95 8.94385 31.2187 7.7626 30.0937 7.14385L19.9125 1.4626C18.7875 0.843848 17.3812 0.843848 16.3125 1.4626L5.84999 7.5376C4.72499 8.2126 4.04999 9.39385 4.04999 10.6876C4.04999 11.9813 4.72499 13.2188 5.84999 13.8376L7.08749 14.5688L5.84999 15.3001C4.72499 15.9751 4.04999 17.1563 4.04999 18.4501C4.04999 19.7438 4.72499 20.9813 5.84999 21.6001L6.35624 21.8813L5.84999 22.1626C4.72499 22.8376 3.99374 24.0188 3.99374 25.3126C3.99374 26.6626 4.66874 27.8438 5.79374 28.4626L16.1437 34.4813C16.7062 34.8188 17.325 34.9876 18 34.9876C18.675 34.9876 19.35 34.8188 19.9125 34.4251L30.2625 28.1251C31.3875 27.4501 32.0062 26.2688 32.0062 24.9188C31.95 23.6251 31.275 22.4438 30.0937 21.8251ZM6.52499 10.6876C6.52499 10.5188 6.58124 10.0126 7.08749 9.73135L17.55 3.65635C17.8875 3.43135 18.3375 3.43135 18.675 3.65635L28.9125 9.3376C29.4187 9.61885 29.475 10.1251 29.475 10.2938C29.475 10.4626 29.4187 10.9688 28.9125 11.3063L18.6187 17.6626C18.2812 17.8876 17.8312 17.8876 17.4375 17.6626L7.08749 11.6438C6.58124 11.3626 6.52499 10.8563 6.52499 10.6876ZM7.08749 17.4938L9.56249 16.0313L16.1437 19.8563C16.7062 20.1938 17.325 20.3626 18 20.3626C18.675 20.3626 19.35 20.1938 19.9125 19.8001L26.4375 15.8063L28.8562 17.1563C29.3625 17.4376 29.4187 17.9438 29.4187 18.1126C29.4187 18.2813 29.3625 18.7876 28.8562 19.1251L18.6187 25.4251C18.2812 25.6501 17.8312 25.6501 17.4375 25.4251L7.08749 19.4063C6.58124 19.1251 6.52499 18.6188 6.52499 18.4501C6.52499 18.2813 6.58124 17.7751 7.08749 17.4938ZM28.9125 25.9876L18.6187 32.3438C18.2812 32.5688 17.8312 32.5688 17.4375 32.3438L7.08749 26.3251C6.58124 26.0438 6.52499 25.5376 6.52499 25.3688C6.52499 25.2001 6.58124 24.6938 7.08749 24.4126L8.83124 23.4001L16.2 27.6751C16.7625 28.0126 17.3812 28.1813 18.0562 28.1813C18.7312 28.1813 19.4062 28.0126 19.9687 27.6188L27.225 23.1751L28.9125 24.0751C29.4187 24.3563 29.475 24.8626 29.475 25.0313C29.475 25.2001 29.4187 25.7063 28.9125 25.9876Z"
+                           fill="white"></path>
+                     </svg>
+                  </div>
+                  <h4 class="text-dark  mb-4 text-2xl font-semibold">
+                     Campaign Planning
+                  </h4>
+                  <p class="text-body-color ">
+                     We turn ideas into clear content calendars, launch plans, and promotion schedules so every post has
+                     a purpose and supports the business goal.
+                  </p>
+               </div>
+            </div>
+            <div class="w-full px-4 md:w-1/2 lg:w-1/3">
+               <div class="mb-9 rounded-[20px] bg-white -2 p-10 shadow-2 hover:shadow-lg md:px-7 xl:px-10">
+                  <div class="bg-primary mb-8 flex h-[70px] w-[70px] items-center justify-center rounded-2xl">
+                     <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                           d="M4.725 16.3124C4.89375 16.3124 5.11875 16.2562 5.2875 16.1999L11.5312 14.0062C12.2062 13.7812 12.5437 13.0499 12.3187 12.3749C12.0937 11.6999 11.3625 11.3624 10.6875 11.5874L6.80625 12.9374C8.6625 8.0999 13.3875 4.8374 18.7875 4.8374C24.6938 4.8374 29.8125 8.7749 31.275 14.3999C31.4437 15.0749 32.1187 15.4687 32.7937 15.2999C33.4687 15.1312 33.8625 14.4562 33.6938 13.7812C31.95 7.03115 25.8187 2.30615 18.7312 2.30615C12.4312 2.30615 6.8625 6.01865 4.55625 11.5874L3.375 8.2124C3.15 7.5374 2.41875 7.1999 1.74375 7.4249C1.06875 7.6499 0.73125 8.38115 0.95625 9.05615L3.09375 15.1874C3.43125 15.9187 4.05 16.3124 4.725 16.3124Z"
+                           fill="white"></path>
+                        <path
+                           d="M34.9312 27.9562L32.625 21.9375C32.4562 21.5437 32.175 21.2062 31.7812 21.0375C31.3875 20.8687 30.9375 20.8687 30.5437 21.0375L24.3562 23.3999C23.6812 23.6249 23.4 24.3562 23.625 25.0312C23.85 25.7062 24.5813 25.9875 25.2563 25.7625L29.1375 24.3C26.8875 28.4062 22.5 31.1062 17.6062 31.1062C12.0375 31.1062 7.14375 27.6187 5.4 22.4437C5.175 21.7687 4.44375 21.4312 3.825 21.6562C3.15 21.8812 2.8125 22.6124 3.0375 23.2312C5.11875 29.4187 10.9687 33.5812 17.6062 33.5812C23.4 33.5812 28.6312 30.375 31.275 25.425L32.5688 28.8562C32.7375 29.3625 33.2437 29.6437 33.75 29.6437C33.9187 29.6437 34.0312 29.6437 34.2 29.5312C34.875 29.3625 35.1562 28.6312 34.9312 27.9562Z"
+                           fill="white"></path>
+                     </svg>
+                  </div>
+                  <h4 class="text-dark  mb-4 text-2xl font-semibold">
+                     Engagement &amp; Visibility
+                  </h4>
+                  <p class="text-body-color ">
+                     We focus on making your brand easier to find, easier to trust, and easier to remember across the
+                     platforms where your customers already spend time.
+                  </p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <!-- ====== Services Section End -->
+   <!-- ====== Strategy Section Start -->
+   <section id="strategy" class="section-band">
+      <div class="container mx-auto">
+         <div class="section-heading">
+            <span>Target Audience &amp; Strategy</span>
+            <h2>Who We Help and How We Grow Them</h2>
+            <p>
+               HypeHive Solutions focuses on small businesses and startups that need stronger online visibility,
+               consistent content, and a clear brand style to attract customers.
+            </p>
+         </div>
+         <div class="audience-grid">
+            <div class="info-panel">
+               <h3>Target Audience</h3>
+               <ul>
+                  <li>Small business owners who do not have time to manage social media daily</li>
+                  <li>Startups that need a professional first impression online</li>
+                  <li>Online sellers who need consistent logo, color, and post design</li>
+                  <li>F&amp;B, fashion, beauty, and lifestyle brands that depend on visual content</li>
+               </ul>
+            </div>
+            <div class="info-panel">
+               <h3>Main Social Media Platform</h3>
+               <p>
+                  Instagram is selected as the main platform because it is visual, mobile-friendly, and suitable for
+                  posts, reels, stories, product promotions, and customer engagement.
+               </p>
+               <ul>
+                  <li>Platform: Instagram</li>
+                  <li>Handle: @hypehive.solutions</li>
+                  <li>Required content: 6 posts, 1 reel, and 1 story</li>
+               </ul>
+            </div>
+            <div class="info-panel">
+               <h3>Why Instagram Fits</h3>
+               <p>
+                  Our target clients sell visual products and services. Instagram helps them show products, announce
+                  promotions, build trust through regular updates, and reach younger customers through reels and stories.
+               </p>
+            </div>
+         </div>
+         <div class="content-plan">
+            <div>
+               <h3>Instagram Content Plan</h3>
+               <p>These content ideas match the assignment requirement of 6 posts, 1 reel, and 1 story.</p>
+            </div>
+            <div class="plan-list">
+               <span>Post 1: Brand introduction</span>
+               <span>Post 2: Social media management service</span>
+               <span>Post 3: Content creation examples</span>
+               <span>Post 4: Branding before and after</span>
+               <span>Post 5: Marketing tips for small businesses</span>
+               <span>Post 6: Client campaign example</span>
+               <span>Reel: Bubble tea promotion concept</span>
+               <span>Story: Poll or Q&amp;A about marketing struggles</span>
+            </div>
+         </div>
+         <div class="strategy-subheading">
+            <h3>SMART Goals &amp; KPIs</h3>
+            <p>
+               These proposed goals are specific, measurable, achievable, relevant, and time-bound. Actual analytics
+               are not required; the KPIs show what the business would measure.
+            </p>
+         </div>
+         <div class="strategy-grid">
+            <div class="goal-card">
+               <div class="goal-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                     <path d="M4 13.5C7.2 13.2 9.8 11.9 12 9.7L14.4 12.1C15.8 10.8 17.2 9.1 18.4 7"></path>
+                     <path d="M15.4 7H18.4V10"></path>
+                     <path d="M4 19H20"></path>
+                  </svg>
+               </div>
+               <span>Goal 01</span>
+               <h3>Increase Awareness</h3>
+               <p>Reach 1,000 Instagram accounts within 3 months through reels, stories, and consistent posting.</p>
+               <strong>KPI: Reach, impressions, reel views</strong>
+            </div>
+            <div class="goal-card">
+               <div class="goal-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                     <circle cx="9" cy="8" r="3"></circle>
+                     <path d="M3.5 19C4.3 16.5 6.2 15.2 9 15.2C11.8 15.2 13.7 16.5 14.5 19"></path>
+                     <path d="M16 8.5H21"></path>
+                     <path d="M18.5 6V11"></path>
+                  </svg>
+               </div>
+               <span>Goal 02</span>
+               <h3>Grow Followers</h3>
+               <p>Gain 300 followers within 3 months by posting useful marketing tips and business examples.</p>
+               <strong>KPI: Follower growth, profile visits</strong>
+            </div>
+            <div class="goal-card">
+               <div class="goal-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                     <path d="M7 11.5V20"></path>
+                     <path d="M17 11.5V20"></path>
+                     <path d="M7 11.5L12 5L17 11.5"></path>
+                     <path d="M5 20H19"></path>
+                  </svg>
+               </div>
+               <span>Goal 03</span>
+               <h3>Improve Engagement</h3>
+               <p>Achieve an average of 50 likes, comments, saves, or shares per post within 8 weeks.</p>
+               <strong>KPI: Likes, comments, saves, shares</strong>
+            </div>
+            <div class="goal-card">
+               <div class="goal-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                     <path d="M4 6.5H20V17.5H4Z"></path>
+                     <path d="M4 7L12 12.5L20 7"></path>
+                     <path d="M17 14.5L20 17.5"></path>
+                  </svg>
+               </div>
+               <span>Goal 04</span>
+               <h3>Generate Enquiries</h3>
+               <p>Receive 10 service enquiries per month through Instagram DMs, website contact, and campaign posts.</p>
+               <strong>KPI: DMs, contact clicks, enquiry forms</strong>
+            </div>
+         </div>
+      </div>
+   </section>
+   <!-- ====== Strategy Section End -->
+   <!-- ====== Testimonials Section Start -->
+   <section id="testimonials" class="pt-20 pb-20 lg:pt-[120px] lg:pb-[120px]">
+      <div class="container mx-auto">
+            <div class="section-heading">
+               <span>Example Campaigns</span>
+               <h2>How HypeHive Can Support Real Businesses</h2>
+               <p>
+                  These examples show how our services can be applied to everyday small business situations.
+               </p>
+            </div>
+
+            <div class="relative flex justify-center">
+               <div class=" swiper mySwiper">
+                  <div class="swiper-wrapper ">
+                     <div class="swiper-slide">
+                        <div class="w-full md:flex">
+                           <div class="relative mb-12 w-full max-w-[310px] md:mr-12 md:mb-0 md:max-w-[250px] lg:mr-14 lg:max-w-[280px] xl:max-w-[310px] 2xl:mr-16">
+                              <img src="./assets/images/image-01.jpg" alt="image" class="w-full rounded-xl">
+                              <span class="absolute -top-6 -right-6 z-[-1] hidden sm:block">
+                                 <svg width="77" height="77" viewBox="0 0 77 77" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="1.66343" cy="74.5221" r="1.66343" transform="rotate(-90 1.66343 74.5221)" fill="#3758F9"></circle>
+                                    <circle cx="1.66343" cy="30.9401" r="1.66343" transform="rotate(-90 1.66343 30.9401)" fill="#3758F9"></circle>
+                                    <circle cx="16.3016" cy="74.5221" r="1.66343" transform="rotate(-90 16.3016 74.5221)" fill="#3758F9"></circle>
+                                    <circle cx="16.3016" cy="30.9401" r="1.66343" transform="rotate(-90 16.3016 30.9401)" fill="#3758F9"></circle>
+                                    <circle cx="30.9398" cy="74.5221" r="1.66343" transform="rotate(-90 30.9398 74.5221)" fill="#3758F9"></circle>
+                                    <circle cx="30.9398" cy="30.9401" r="1.66343" transform="rotate(-90 30.9398 30.9401)" fill="#3758F9"></circle>
+                                    <circle cx="45.578" cy="74.5221" r="1.66343" transform="rotate(-90 45.578 74.5221)" fill="#3758F9"></circle>
+                                    <circle cx="45.578" cy="30.9401" r="1.66343" transform="rotate(-90 45.578 30.9401)" fill="#3758F9"></circle>
+                                    <circle cx="60.2162" cy="74.5216" r="1.66343" transform="rotate(-90 60.2162 74.5216)" fill="#3758F9"></circle>
+                                    <circle cx="74.6634" cy="74.5216" r="1.66343" transform="rotate(-90 74.6634 74.5216)" fill="#3758F9"></circle>
+                                    <circle cx="60.2162" cy="30.9398" r="1.66343" transform="rotate(-90 60.2162 30.9398)" fill="#3758F9"></circle>
+                                    <circle cx="74.6634" cy="30.9398" r="1.66343" transform="rotate(-90 74.6634 30.9398)" fill="#3758F9"></circle>
+                                    <circle cx="1.66343" cy="59.8839" r="1.66343" transform="rotate(-90 1.66343 59.8839)" fill="#3758F9"></circle>
+                                    <circle cx="1.66343" cy="16.3017" r="1.66343" transform="rotate(-90 1.66343 16.3017)" fill="#3758F9"></circle>
+                                    <circle cx="16.3016" cy="59.8839" r="1.66343" transform="rotate(-90 16.3016 59.8839)" fill="#3758F9"></circle>
+                                    <circle cx="16.3016" cy="16.3017" r="1.66343" transform="rotate(-90 16.3016 16.3017)" fill="#3758F9"></circle>
+                                    <circle cx="30.9398" cy="59.8839" r="1.66343" transform="rotate(-90 30.9398 59.8839)" fill="#3758F9"></circle>
+                                    <circle cx="30.9398" cy="16.3017" r="1.66343" transform="rotate(-90 30.9398 16.3017)" fill="#3758F9"></circle>
+                                    <circle cx="45.578" cy="59.8839" r="1.66343" transform="rotate(-90 45.578 59.8839)" fill="#3758F9"></circle>
+                                    <circle cx="45.578" cy="16.3017" r="1.66343" transform="rotate(-90 45.578 16.3017)" fill="#3758F9"></circle>
+                                    <circle cx="60.2162" cy="59.8839" r="1.66343" transform="rotate(-90 60.2162 59.8839)" fill="#3758F9"></circle>
+                                    <circle cx="74.6634" cy="59.8839" r="1.66343" transform="rotate(-90 74.6634 59.8839)" fill="#3758F9"></circle>
+                                    <circle cx="60.2162" cy="16.3017" r="1.66343" transform="rotate(-90 60.2162 16.3017)" fill="#3758F9"></circle>
+                                    <circle cx="74.6634" cy="16.3017" r="1.66343" transform="rotate(-90 74.6634 16.3017)" fill="#3758F9"></circle>
+                                    <circle cx="1.66343" cy="45.2455" r="1.66343" transform="rotate(-90 1.66343 45.2455)" fill="#3758F9"></circle>
+                                    <circle cx="1.66343" cy="1.66347" r="1.66343" transform="rotate(-90 1.66343 1.66347)" fill="#3758F9"></circle>
+                                    <circle cx="16.3016" cy="45.2455" r="1.66343" transform="rotate(-90 16.3016 45.2455)" fill="#3758F9"></circle>
+                                    <circle cx="16.3016" cy="1.66347" r="1.66343" transform="rotate(-90 16.3016 1.66347)" fill="#3758F9"></circle>
+                                    <circle cx="30.9398" cy="45.2455" r="1.66343" transform="rotate(-90 30.9398 45.2455)" fill="#3758F9"></circle>
+                                    <circle cx="30.9398" cy="1.66347" r="1.66343" transform="rotate(-90 30.9398 1.66347)" fill="#3758F9"></circle>
+                                    <circle cx="45.578" cy="45.2455" r="1.66343" transform="rotate(-90 45.578 45.2455)" fill="#3758F9"></circle>
+                                    <circle cx="45.578" cy="1.66347" r="1.66343" transform="rotate(-90 45.578 1.66347)" fill="#3758F9"></circle>
+                                    <circle cx="60.2162" cy="45.2457" r="1.66343" transform="rotate(-90 60.2162 45.2457)" fill="#3758F9"></circle>
+                                    <circle cx="74.6634" cy="45.2457" r="1.66343" transform="rotate(-90 74.6634 45.2457)" fill="#3758F9"></circle>
+                                    <circle cx="60.2162" cy="1.66371" r="1.66343" transform="rotate(-90 60.2162 1.66371)" fill="#3758F9"></circle>
+                                    <circle cx="74.6634" cy="1.66371" r="1.66343" transform="rotate(-90 74.6634 1.66371)" fill="#3758F9"></circle>
+                                 </svg>
+                              </span>
+                              <span class="absolute -bottom-6 -right-6 z-[-1]">
+                                 <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M3 32C3 15.9837 15.9837 3 32 3C48.0163 2.99999 61 15.9837 61 32C61 48.0163 48.0163 61 32 61C15.9837 61 3 48.0163 3 32Z" stroke="#13C296" stroke-width="6"></path>
+                                 </svg>
+                              </span>
+                           </div>
+                           <div class="w-full">
+                              <div>
+                                 <div class="mb-8 mt-5">
+                                    <img src="./assets/images/hypehive-logo-transparent.png" alt="HypeHive Solutions logo" class="testimonial-logo">
+                                 </div>
+                                 <p class="text-body-color mb-11 text-base leading-[1.81] font-normal italic sm:text-[22px]">
+                                    HypeHive helped our home bakery stay active on Instagram without the daily stress.
+                                    They planned our posting schedule, handled comments, and made the brand feel alive online.
+                                </p>
+                                <h4 class="text-dark dark:text-white mb-2 leading-[27px] text-[22px] font-semibold">
+                                    Cake Studio Client
+                                </h4>
+                                <p class="text-body-color text-base">
+                                    Small Bakery Owner
+                                </p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="swiper-slide">
+                        <div class="w-full md:flex">
+                           <div class="relative mb-12 w-full max-w-[310px] md:mr-12 md:mb-0 md:max-w-[250px] lg:mr-14 lg:max-w-[280px] xl:max-w-[310px] 2xl:mr-16">
+                              <img src="./assets/images/image-01.jpg" alt="image" class="w-full rounded-xl">
+                              <span class="absolute -top-6 -right-6 z-[-1] hidden sm:block">
+                                 <svg width="77" height="77" viewBox="0 0 77 77" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="1.66343" cy="74.5221" r="1.66343" transform="rotate(-90 1.66343 74.5221)" fill="#3758F9"></circle>
+                                    <circle cx="1.66343" cy="30.9401" r="1.66343" transform="rotate(-90 1.66343 30.9401)" fill="#3758F9"></circle>
+                                    <circle cx="16.3016" cy="74.5221" r="1.66343" transform="rotate(-90 16.3016 74.5221)" fill="#3758F9"></circle>
+                                    <circle cx="16.3016" cy="30.9401" r="1.66343" transform="rotate(-90 16.3016 30.9401)" fill="#3758F9"></circle>
+                                    <circle cx="30.9398" cy="74.5221" r="1.66343" transform="rotate(-90 30.9398 74.5221)" fill="#3758F9"></circle>
+                                    <circle cx="30.9398" cy="30.9401" r="1.66343" transform="rotate(-90 30.9398 30.9401)" fill="#3758F9"></circle>
+                                    <circle cx="45.578" cy="74.5221" r="1.66343" transform="rotate(-90 45.578 74.5221)" fill="#3758F9"></circle>
+                                    <circle cx="45.578" cy="30.9401" r="1.66343" transform="rotate(-90 45.578 30.9401)" fill="#3758F9"></circle>
+                                    <circle cx="60.2162" cy="74.5216" r="1.66343" transform="rotate(-90 60.2162 74.5216)" fill="#3758F9"></circle>
+                                    <circle cx="74.6634" cy="74.5216" r="1.66343" transform="rotate(-90 74.6634 74.5216)" fill="#3758F9"></circle>
+                                    <circle cx="60.2162" cy="30.9398" r="1.66343" transform="rotate(-90 60.2162 30.9398)" fill="#3758F9"></circle>
+                                    <circle cx="74.6634" cy="30.9398" r="1.66343" transform="rotate(-90 74.6634 30.9398)" fill="#3758F9"></circle>
+                                    <circle cx="1.66343" cy="59.8839" r="1.66343" transform="rotate(-90 1.66343 59.8839)" fill="#3758F9"></circle>
+                                    <circle cx="1.66343" cy="16.3017" r="1.66343" transform="rotate(-90 1.66343 16.3017)" fill="#3758F9"></circle>
+                                    <circle cx="16.3016" cy="59.8839" r="1.66343" transform="rotate(-90 16.3016 59.8839)" fill="#3758F9"></circle>
+                                    <circle cx="16.3016" cy="16.3017" r="1.66343" transform="rotate(-90 16.3016 16.3017)" fill="#3758F9"></circle>
+                                    <circle cx="30.9398" cy="59.8839" r="1.66343" transform="rotate(-90 30.9398 59.8839)" fill="#3758F9"></circle>
+                                    <circle cx="30.9398" cy="16.3017" r="1.66343" transform="rotate(-90 30.9398 16.3017)" fill="#3758F9"></circle>
+                                    <circle cx="45.578" cy="59.8839" r="1.66343" transform="rotate(-90 45.578 59.8839)" fill="#3758F9"></circle>
+                                    <circle cx="45.578" cy="16.3017" r="1.66343" transform="rotate(-90 45.578 16.3017)" fill="#3758F9"></circle>
+                                    <circle cx="60.2162" cy="59.8839" r="1.66343" transform="rotate(-90 60.2162 59.8839)" fill="#3758F9"></circle>
+                                    <circle cx="74.6634" cy="59.8839" r="1.66343" transform="rotate(-90 74.6634 59.8839)" fill="#3758F9"></circle>
+                                    <circle cx="60.2162" cy="16.3017" r="1.66343" transform="rotate(-90 60.2162 16.3017)" fill="#3758F9"></circle>
+                                    <circle cx="74.6634" cy="16.3017" r="1.66343" transform="rotate(-90 74.6634 16.3017)" fill="#3758F9"></circle>
+                                    <circle cx="1.66343" cy="45.2455" r="1.66343" transform="rotate(-90 1.66343 45.2455)" fill="#3758F9"></circle>
+                                    <circle cx="1.66343" cy="1.66347" r="1.66343" transform="rotate(-90 1.66343 1.66347)" fill="#3758F9"></circle>
+                                    <circle cx="16.3016" cy="45.2455" r="1.66343" transform="rotate(-90 16.3016 45.2455)" fill="#3758F9"></circle>
+                                    <circle cx="16.3016" cy="1.66347" r="1.66343" transform="rotate(-90 16.3016 1.66347)" fill="#3758F9"></circle>
+                                    <circle cx="30.9398" cy="45.2455" r="1.66343" transform="rotate(-90 30.9398 45.2455)" fill="#3758F9"></circle>
+                                    <circle cx="30.9398" cy="1.66347" r="1.66343" transform="rotate(-90 30.9398 1.66347)" fill="#3758F9"></circle>
+                                    <circle cx="45.578" cy="45.2455" r="1.66343" transform="rotate(-90 45.578 45.2455)" fill="#3758F9"></circle>
+                                    <circle cx="45.578" cy="1.66347" r="1.66343" transform="rotate(-90 45.578 1.66347)" fill="#3758F9"></circle>
+                                    <circle cx="60.2162" cy="45.2457" r="1.66343" transform="rotate(-90 60.2162 45.2457)" fill="#3758F9"></circle>
+                                    <circle cx="74.6634" cy="45.2457" r="1.66343" transform="rotate(-90 74.6634 45.2457)" fill="#3758F9"></circle>
+                                    <circle cx="60.2162" cy="1.66371" r="1.66343" transform="rotate(-90 60.2162 1.66371)" fill="#3758F9"></circle>
+                                    <circle cx="74.6634" cy="1.66371" r="1.66343" transform="rotate(-90 74.6634 1.66371)" fill="#3758F9"></circle>
+                                 </svg>
+                              </span>
+                              <span class="absolute -bottom-6 -right-6 z-[-1]">
+                                 <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M3 32C3 15.9837 15.9837 3 32 3C48.0163 2.99999 61 15.9837 61 32C61 48.0163 48.0163 61 32 61C15.9837 61 3 48.0163 3 32Z" stroke="#13C296" stroke-width="6"></path>
+                                 </svg>
+                              </span>
+                           </div>
+                           <div class="w-full">
+                              <div>
+                                 <div class="mb-8 mt-5">
+                                    <img src="./assets/images/hypehive-logo-transparent.png" alt="HypeHive Solutions logo" class="testimonial-logo">
+                                 </div>
+                                 <p class="text-body-color mb-11 text-base leading-[1.81] font-normal italic sm:text-[22px]">
+                                    For our new bubble tea promotion, HypeHive designed the announcement post and created
+                                    a short reel that made the drink look fun, fresh, and easy to share.
+                                </p>
+                                <h4 class="text-dark mb-2 leading-[27px] text-[22px] font-semibold">
+                                    Bubble Tea Brand
+                                </h4>
+                                <p class="text-body-color text-base">
+                                    Local F&amp;B Business
+                                </p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="swiper-slide">
+                        <div class="w-full md:flex">
+                           <div class="relative mb-12 w-full max-w-[310px] md:mr-12 md:mb-0 md:max-w-[250px] lg:mr-14 lg:max-w-[280px] xl:max-w-[310px] 2xl:mr-16">
+                              <img src="./assets/images/image-01.jpg" alt="image" class="w-full rounded-xl">
+                              <span class="absolute -top-6 -right-6 z-[-1] hidden sm:block">
+                                 <svg width="77" height="77" viewBox="0 0 77 77" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="1.66343" cy="74.5221" r="1.66343" transform="rotate(-90 1.66343 74.5221)" fill="#3758F9"></circle>
+                                    <circle cx="1.66343" cy="30.9401" r="1.66343" transform="rotate(-90 1.66343 30.9401)" fill="#3758F9"></circle>
+                                    <circle cx="16.3016" cy="74.5221" r="1.66343" transform="rotate(-90 16.3016 74.5221)" fill="#3758F9"></circle>
+                                    <circle cx="16.3016" cy="30.9401" r="1.66343" transform="rotate(-90 16.3016 30.9401)" fill="#3758F9"></circle>
+                                    <circle cx="30.9398" cy="74.5221" r="1.66343" transform="rotate(-90 30.9398 74.5221)" fill="#3758F9"></circle>
+                                    <circle cx="30.9398" cy="30.9401" r="1.66343" transform="rotate(-90 30.9398 30.9401)" fill="#3758F9"></circle>
+                                    <circle cx="45.578" cy="74.5221" r="1.66343" transform="rotate(-90 45.578 74.5221)" fill="#3758F9"></circle>
+                                    <circle cx="45.578" cy="30.9401" r="1.66343" transform="rotate(-90 45.578 30.9401)" fill="#3758F9"></circle>
+                                    <circle cx="60.2162" cy="74.5216" r="1.66343" transform="rotate(-90 60.2162 74.5216)" fill="#3758F9"></circle>
+                                    <circle cx="74.6634" cy="74.5216" r="1.66343" transform="rotate(-90 74.6634 74.5216)" fill="#3758F9"></circle>
+                                    <circle cx="60.2162" cy="30.9398" r="1.66343" transform="rotate(-90 60.2162 30.9398)" fill="#3758F9"></circle>
+                                    <circle cx="74.6634" cy="30.9398" r="1.66343" transform="rotate(-90 74.6634 30.9398)" fill="#3758F9"></circle>
+                                    <circle cx="1.66343" cy="59.8839" r="1.66343" transform="rotate(-90 1.66343 59.8839)" fill="#3758F9"></circle>
+                                    <circle cx="1.66343" cy="16.3017" r="1.66343" transform="rotate(-90 1.66343 16.3017)" fill="#3758F9"></circle>
+                                    <circle cx="16.3016" cy="59.8839" r="1.66343" transform="rotate(-90 16.3016 59.8839)" fill="#3758F9"></circle>
+                                    <circle cx="16.3016" cy="16.3017" r="1.66343" transform="rotate(-90 16.3016 16.3017)" fill="#3758F9"></circle>
+                                    <circle cx="30.9398" cy="59.8839" r="1.66343" transform="rotate(-90 30.9398 59.8839)" fill="#3758F9"></circle>
+                                    <circle cx="30.9398" cy="16.3017" r="1.66343" transform="rotate(-90 30.9398 16.3017)" fill="#3758F9"></circle>
+                                    <circle cx="45.578" cy="59.8839" r="1.66343" transform="rotate(-90 45.578 59.8839)" fill="#3758F9"></circle>
+                                    <circle cx="45.578" cy="16.3017" r="1.66343" transform="rotate(-90 45.578 16.3017)" fill="#3758F9"></circle>
+                                    <circle cx="60.2162" cy="59.8839" r="1.66343" transform="rotate(-90 60.2162 59.8839)" fill="#3758F9"></circle>
+                                    <circle cx="74.6634" cy="59.8839" r="1.66343" transform="rotate(-90 74.6634 59.8839)" fill="#3758F9"></circle>
+                                    <circle cx="60.2162" cy="16.3017" r="1.66343" transform="rotate(-90 60.2162 16.3017)" fill="#3758F9"></circle>
+                                    <circle cx="74.6634" cy="16.3017" r="1.66343" transform="rotate(-90 74.6634 16.3017)" fill="#3758F9"></circle>
+                                    <circle cx="1.66343" cy="45.2455" r="1.66343" transform="rotate(-90 1.66343 45.2455)" fill="#3758F9"></circle>
+                                    <circle cx="1.66343" cy="1.66347" r="1.66343" transform="rotate(-90 1.66343 1.66347)" fill="#3758F9"></circle>
+                                    <circle cx="16.3016" cy="45.2455" r="1.66343" transform="rotate(-90 16.3016 45.2455)" fill="#3758F9"></circle>
+                                    <circle cx="16.3016" cy="1.66347" r="1.66343" transform="rotate(-90 16.3016 1.66347)" fill="#3758F9"></circle>
+                                    <circle cx="30.9398" cy="45.2455" r="1.66343" transform="rotate(-90 30.9398 45.2455)" fill="#3758F9"></circle>
+                                    <circle cx="30.9398" cy="1.66347" r="1.66343" transform="rotate(-90 30.9398 1.66347)" fill="#3758F9"></circle>
+                                    <circle cx="45.578" cy="45.2455" r="1.66343" transform="rotate(-90 45.578 45.2455)" fill="#3758F9"></circle>
+                                    <circle cx="45.578" cy="1.66347" r="1.66343" transform="rotate(-90 45.578 1.66347)" fill="#3758F9"></circle>
+                                    <circle cx="60.2162" cy="45.2457" r="1.66343" transform="rotate(-90 60.2162 45.2457)" fill="#3758F9"></circle>
+                                    <circle cx="74.6634" cy="45.2457" r="1.66343" transform="rotate(-90 74.6634 45.2457)" fill="#3758F9"></circle>
+                                    <circle cx="60.2162" cy="1.66371" r="1.66343" transform="rotate(-90 60.2162 1.66371)" fill="#3758F9"></circle>
+                                    <circle cx="74.6634" cy="1.66371" r="1.66343" transform="rotate(-90 74.6634 1.66371)" fill="#3758F9"></circle>
+                                 </svg>
+                              </span>
+                              <span class="absolute -bottom-6 -right-6 z-[-1]">
+                                 <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M3 32C3 15.9837 15.9837 3 32 3C48.0163 2.99999 61 15.9837 61 32C61 48.0163 48.0163 61 32 61C15.9837 61 3 48.0163 3 32Z" stroke="#13C296" stroke-width="6"></path>
+                                 </svg>
+                              </span>
+                           </div>
+                           <div class="w-full">
+                              <div>
+                                 <div class="mb-8 mt-5">
+                                    <img src="./assets/images/hypehive-logo-transparent.png" alt="HypeHive Solutions logo" class="testimonial-logo">
+                                 </div>
+                                 <p class="text-body-color mb-11 text-base leading-[1.81] font-normal italic sm:text-[22px]">
+                                    We needed a cleaner brand style for our online shop. HypeHive created the logo,
+                                    colors, and post direction so our page finally looked consistent and professional.
+                                </p>
+                                <h4 class="text-dark mb-2 leading-[27px] text-[22px] font-semibold">
+                                    Online Seller
+                                </h4>
+                                <p class="text-body-color text-base">
+                                    Startup Retail Brand
+                                </p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="flex items-center gap-5 justify-center">
+                     <button class="swiper-btn-prev text-dark border border-stroke flex h-[60px] w-[60px] mr-4 items-center justify-center rounded-full bg-white transition-all hover:bg-primary hover:border-primary">
+                         <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg" class="fill-current">
+                             <path d="M17.5 9.5H4.15625L9.46875 4.09375C9.75 3.8125 9.75 3.375 9.46875 3.09375C9.1875 2.8125 8.75 2.8125 8.46875 3.09375L2 9.65625C1.71875 9.9375 1.71875 10.375 2 10.6562L8.46875 17.2188C8.59375 17.3438 8.78125 17.4375 8.96875 17.4375C9.15625 17.4375 9.3125 17.375 9.46875 17.25C9.75 16.9687 9.75 16.5313 9.46875 16.25L4.1875 10.9062H17.5C17.875 10.9062 18.1875 10.5937 18.1875 10.2187C18.1875 9.8125 17.875 9.5 17.5 9.5Z" fill="" class=""></path>
+                         </svg>
+                     </button>
+                     <button class="swiper-btn-next text-dark border border-stroke flex h-[60px] w-[60px] items-center justify-center rounded-full bg-white transition-all hover:bg-primary hover:border-primary">
+                         <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg" class="fill-current">
+                             <path d="M18 9.6875L11.5312 3.125C11.25 2.84375 10.8125 2.84375 10.5312 3.125C10.25 3.40625 10.25 3.84375 10.5312 4.125L15.7812 9.46875H2.5C2.125 9.46875 1.8125 9.78125 1.8125 10.1562C1.8125 10.5312 2.125 10.875 2.5 10.875H15.8437L10.5312 16.2813C10.25 16.5625 10.25 17 10.5312 17.2813C10.6562 17.4063 10.8437 17.4688 11.0312 17.4688C11.2187 17.4688 11.4062 17.4062 11.5312 17.25L18 10.6875C18.2812 10.4062 18.2812 9.96875 18 9.6875Z" fill=""></path>
+                         </svg>
+                     </button>
+                 </div>
+               </div>
+         </div>
+      </div>
+   </section>
+   <!-- ====== Testimonials Section End -->
+   <!-- ====== Call To Action Section Start -->
+   <section id="getstarted" class="bg-white ">
+      <div class="">
+         <div class="relative z-10 overflow-hidden rounded bg-primary py-12 px-8 md:p-[70px]">
+            <div class="flex flex-wrap items-center -mx-4">
+               <div class="w-full px-4 lg:w-1/2">
+                  <span class="block mb-4 text-base font-medium text-white">
+                     Contact Information
+                  </span>
+                  <h2 class="mb-6 text-3xl font-bold leading-tight text-white sm:mb-8 sm:text-[40px]/[48px] lg:mb-0">
+                     <span class="xs:block">Ready to grow</span>
+                     <span>your online presence?</span>
+                  </h2>
+                  <p class="cta-copy">
+                     Reach out to HypeHive Solutions for social media management, content creation, branding, and
+                     marketing strategy support.
+                  </p>
+                  <div class="social-links" aria-label="HypeHive Solutions social media links">
+                     <a href="https://www.instagram.com/hypehive.solutions/" class="social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                           <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+                           <circle cx="12" cy="12" r="4"></circle>
+                           <circle cx="17.5" cy="6.5" r="1"></circle>
+                        </svg>
+                     </a>
+                     <a href="https://www.facebook.com/hypehive.solutions" class="social-link" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                           <path d="M14 8.5H16V5H13.5C10.7 5 9 6.7 9 9.4V12H6.5V15.5H9V21H12.8V15.5H15.6L16.1 12H12.8V9.8C12.8 9 13.2 8.5 14 8.5Z"></path>
+                        </svg>
+                     </a>
+                     <a href="https://x.com/hypehiveagency" class="social-link" aria-label="X / Twitter">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                           <path d="M4 4.5H8.7L12.3 9.3L16.5 4.5H20L14.1 11.2L20.5 19.5H15.8L11.8 14.2L7.1 19.5H3.5L10 12.1L4 4.5ZM6.9 6.4L16.7 17.6H17.6L7.8 6.4H6.9Z"></path>
+                        </svg>
+                     </a>
+                     <a href="https://www.tiktok.com/@hypehive.solutions" class="social-link" aria-label="TikTok">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                           <path d="M14.5 4C15 7 16.8 8.7 20 8.9V12.2C17.9 12.3 16.1 11.7 14.7 10.6V16.1C14.7 19.1 12.5 21 9.6 21C6.9 21 4.8 19.2 4.8 16.6C4.8 13.8 7 12 10.2 12C10.6 12 11 12.1 11.4 12.2V8.8H11.3V4H14.5ZM11.4 15.4C11 15.2 10.6 15.1 10.1 15.1C8.9 15.1 8.1 15.7 8.1 16.6C8.1 17.5 8.8 18.1 9.8 18.1C10.8 18.1 11.4 17.5 11.4 16.2V15.4Z"></path>
+                        </svg>
+                     </a>
+                     <a href="https://wa.me/60123456789" class="social-link" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                           <path d="M12 4C7.6 4 4 7.4 4 11.7C4 13.1 4.4 14.5 5.1 15.6L4.2 20L8.7 18.8C9.7 19.3 10.8 19.5 12 19.5C16.4 19.5 20 16.1 20 11.8C20 7.4 16.4 4 12 4ZM8.8 8.4C9 8.1 9.2 8.1 9.5 8.1H10C10.2 8.1 10.4 8.2 10.5 8.5L11.1 9.9C11.2 10.2 11.2 10.4 11 10.6L10.6 11.1C10.5 11.2 10.5 11.4 10.6 11.5C11 12.2 11.6 12.8 12.3 13.3C12.5 13.4 12.7 13.5 12.9 13.3L13.5 12.8C13.7 12.6 13.9 12.6 14.1 12.7L15.6 13.4C15.9 13.5 16 13.7 16 13.9C15.9 14.5 15.6 15.1 15.1 15.4C14.7 15.7 13.9 15.7 13.2 15.5C11.7 15.1 9.6 13.4 8.7 11.8C8.2 10.9 8 10 8.2 9.3C8.3 8.9 8.5 8.6 8.8 8.4Z"></path>
+                        </svg>
+                     </a>
+                  </div>
+               </div>
+               <div class="w-full px-4 lg:w-1/2">
+                  <div class="contact-panel">
+                     <a href="mailto:hello@hypehivesolutions.com">hello@hypehivesolutions.com</a>
+                     <button type="button" class="copy-contact" data-copy="+60 12-345 6789" aria-label="Copy phone number">+60 12-345 6789</button>
+                     <span>Instagram: <a href="https://www.instagram.com/hypehive.solutions/" target="_blank" rel="noopener noreferrer">@hypehive.solutions</a></span>
+                     <span>Kuala Lumpur, Malaysia</span>
+                     <span>Business Hours: Monday - Friday, 9:00 AM - 6:00 PM</span>
+                  </div>
+               </div>
+            </div>
+            <div>
+               <span class="absolute top-0 left-0 z-[-1]">
+                  <svg width="189" height="162" viewBox="0 0 189 162" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <ellipse cx="16" cy="-16.5" rx="173" ry="178.5" transform="rotate(180 16 -16.5)"
+                        fill="url(#paint0_linear)"></ellipse>
+                     <defs>
+                        <linearGradient id="paint0_linear" x1="-157" y1="-107.754" x2="98.5011" y2="-106.425"
+                           gradientUnits="userSpaceOnUse">
+                           <stop stop-color="white" stop-opacity="0.07"></stop>
+                           <stop offset="1" stop-color="white" stop-opacity="0"></stop>
+                        </linearGradient>
+                     </defs>
+                  </svg>
+               </span>
+               <span class="absolute bottom-0 right-0 z-[-1]">
+                  <svg width="191" height="208" viewBox="0 0 191 208" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <ellipse cx="173" cy="178.5" rx="173" ry="178.5" fill="url(#paint0_linear)"></ellipse>
+                     <defs>
+                        <linearGradient id="paint0_linear" x1="-3.27832e-05" y1="87.2457" x2="255.501" y2="88.5747"
+                           gradientUnits="userSpaceOnUse">
+                           <stop stop-color="white" stop-opacity="0.07"></stop>
+                           <stop offset="1" stop-color="white" stop-opacity="0"></stop>
+                        </linearGradient>
+                     </defs>
+                  </svg>
+               </span>
+            </div>
+         </div>
+      </div>
+   </section>
+   <!-- ====== Call To Action Section End -->
+   <!-- ====== Footer Section Start -->
+   <footer class="py-10">
+      <div class="container mx-auto text-center">
+         &copy; 2026 <a href="#home">HypeHive Solutions.</a> All rights reserved.
+      </div>
+   </footer>
+   <!-- ====== Footer Section End -->
+   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+   <script src="assets/js/script.js"></script>
+</body>
+
+</html>
