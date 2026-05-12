@@ -2908,6 +2908,16 @@ nav.bg-white,
         justify-content: center;
     }
 
+    #getstarted .social-links{
+        gap: 14px;
+        margin-top: 26px;
+        margin-bottom: 18px;
+    }
+
+    #getstarted .contact-panel{
+        margin-top: 0;
+    }
+
     .hero-audience{
         display: block;
         padding-top: 40px !important;
