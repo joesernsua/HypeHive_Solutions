@@ -2740,8 +2740,17 @@ nav.bg-white,
         order: 2;
     }
 
-    .hype-hero .container > .flex > div:last-child{
+    .hype-hero .container > .flex > div:nth-child(3){
         order: 1;
+    }
+
+    .hero-page-center-cta{
+        order: 3;
+        margin-top: 0;
+    }
+
+    .hero-content{
+        margin-top: 0;
     }
 
     .hype-hero .hero-content h1{
