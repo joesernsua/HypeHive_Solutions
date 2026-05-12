@@ -231,6 +231,8 @@ nav.bg-white,
 }
 
 .hero-content{
+    display: flex;
+    flex-direction: column;
     animation: fadeUp 0.85s ease both;
 }
 
@@ -257,7 +259,7 @@ nav.bg-white,
     max-width: 520px;
     margin-bottom: 26px;
     color: #090909;
-    font-size: clamp(42px, 5vw, 72px) !important;
+    font-size: clamp(36px, 4.2vw, 58px) !important;
     font-weight: 700;
     line-height: 1.08 !important;
     letter-spacing: 0;
@@ -272,7 +274,10 @@ nav.bg-white,
 }
 
 .hero-actions{
+    order: 1;
     gap: 16px;
+    width: fit-content;
+    margin: 0;
 }
 
 .hero-actions a:first-child{
@@ -308,12 +313,24 @@ nav.bg-white,
 }
 
 .hero-audience{
-    padding-top: 72px !important;
+    order: 2;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding-top: 0 !important;
+    margin-top: -62px;
+    margin-left: 180px;
 }
 
 .hero-audience h6{
+    margin: 0 !important;
     color: #211A13 !important;
     font-size: 18px;
+    white-space: nowrap;
+}
+
+.hero-audience h6 span{
+    display: none;
 }
 
 .audience-chips{
@@ -823,6 +840,7 @@ nav.bg-white,
     color: #111827;
     font-size: 14px;
     font-weight: 700;
+    line-height: 28px;
     text-decoration: none;
     width: fit-content;
 }
@@ -833,6 +851,7 @@ nav.bg-white,
     justify-content: center;
     width: 28px;
     height: 28px;
+    flex: 0 0 28px;
     border-radius: 999px;
     background: transparent;
     transition: transform 0.2s ease, background-color 0.2s ease;
@@ -1237,15 +1256,30 @@ nav.bg-white,
 
 .back-link{
     display: inline-flex;
+    align-items: center;
+    justify-content: center;
     margin-bottom: 28px;
-    color: var(--hype-primary);
+    border: 1px solid #111827;
+    border-radius: 8px;
+    background: #FFFFFF;
+    color: #111827;
+    padding: 12px 18px;
     font-weight: 800;
     text-decoration: none;
+    box-shadow: 0 4px 0 #111827;
+    transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.application-back-link{
+    margin-bottom: 28px;
 }
 
 .back-link:hover{
-    color: var(--hype-brown);
-    text-decoration: underline;
+    background: var(--hype-primary-bright);
+    color: #111827;
+    text-decoration: none;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 0 #111827;
 }
 
 .service-detail-layout{
@@ -2816,13 +2850,14 @@ nav.bg-white,
     }
 
     .hype-hero .hero-content h1{
-        font-size: 40px !important;
+        font-size: 34px !important;
         line-height: 1.1 !important;
     }
 
     .hero-actions{
         align-items: stretch;
         flex-direction: column;
+        width: 100%;
     }
 
     .hero-actions li,
@@ -2835,16 +2870,22 @@ nav.bg-white,
     }
 
     .hero-audience{
-        padding-top: 46px !important;
+        display: block;
+        padding-top: 40px !important;
+        margin-top: 0;
+        margin-left: 0;
     }
 
     .hero-audience h6{
         align-items: flex-start;
         flex-direction: column;
         gap: 10px;
+        margin-bottom: 24px !important;
+        white-space: normal;
     }
 
     .hero-audience h6 span{
+        display: none;
         margin-left: 0;
     }
 

@@ -145,7 +145,8 @@ if (detailImage) {
 
 const applyLink = document.querySelector('#applyServiceLink');
 if (applyLink) {
-    applyLink.href = `./index.html?service=${encodeURIComponent(service.value)}#service-form`;
+    applyLink.href = `./application.html?service=${encodeURIComponent(service.value)}#service-form`;
+    applyLink.textContent = 'Apply Form';
 }
 
 const renderList = (selector, items) => {
