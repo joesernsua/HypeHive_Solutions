@@ -3080,6 +3080,8 @@ nav.bg-white,
 
     .service-modern-copy{
         min-height: 164px;
+        justify-content: flex-start;
+        gap: 42px;
     }
 
     .service-modern-copy h3{
