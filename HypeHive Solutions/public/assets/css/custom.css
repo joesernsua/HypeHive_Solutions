@@ -3061,23 +3061,39 @@ nav.bg-white,
     }
 
     .service-modern-card{
-        grid-template-columns: 1fr;
-        min-height: auto;
-        padding: 24px;
+        grid-template-columns: minmax(0, 1fr) 150px;
+        gap: 14px;
+        min-height: 176px;
+        padding: 20px;
         border-radius: 22px;
     }
 
     .service-modern-copy{
-        min-height: 128px;
+        min-height: 132px;
     }
 
     .service-modern-copy h3{
         max-width: 100%;
-        font-size: 22px;
+        font-size: 18px;
     }
 
     .service-image-slot{
-        min-height: 240px;
+        min-height: 132px;
+    }
+
+    .service-image-slot img{
+        height: 140px;
+    }
+
+    .service-learn-link{
+        font-size: 13px;
+    }
+
+    .service-learn-link span,
+    .service-learn-link span img{
+        width: 24px;
+        height: 24px;
+        flex-basis: 24px;
     }
 
     #features{
