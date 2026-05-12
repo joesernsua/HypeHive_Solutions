@@ -3071,28 +3071,29 @@ nav.bg-white,
     }
 
     .service-modern-card{
-        grid-template-columns: minmax(0, 1fr) 150px;
-        gap: 14px;
-        min-height: 176px;
-        padding: 20px;
+        grid-template-columns: minmax(0, 1fr) 46%;
+        gap: 16px;
+        min-height: 230px;
+        padding: 26px 22px;
         border-radius: 22px;
     }
 
     .service-modern-copy{
-        min-height: 132px;
+        min-height: 164px;
     }
 
     .service-modern-copy h3{
         max-width: 100%;
-        font-size: 18px;
+        font-size: 22px;
+        line-height: 1.08;
     }
 
     .service-image-slot{
-        min-height: 132px;
+        min-height: 176px;
     }
 
     .service-image-slot img{
-        height: 140px;
+        height: 190px;
     }
 
     .service-learn-link{
