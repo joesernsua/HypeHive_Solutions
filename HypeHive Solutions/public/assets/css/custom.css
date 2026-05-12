@@ -233,6 +233,7 @@ nav.bg-white,
 .hero-content{
     display: flex;
     flex-direction: column;
+    margin-top: -150px;
     animation: fadeUp 0.85s ease both;
 }
 
@@ -265,16 +266,32 @@ nav.bg-white,
     letter-spacing: 0;
 }
 
-.hype-hero .hero-content p{
+.hero-page-center-cta{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin-top: -135px;
+    padding: 0 16px;
+    text-align: center;
+    animation: fadeUp 0.9s ease 0.16s both;
+}
+
+.hero-page-center-cta p{
     max-width: 430px;
     margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
     color: #211A13;
     font-size: 16px;
     line-height: 1.55;
+    text-align: center;
 }
 
 .hero-actions{
     order: 1;
+    align-self: center;
+    justify-content: center;
     gap: 16px;
     width: fit-content;
     margin: 0;
@@ -373,7 +390,7 @@ nav.bg-white,
     align-items: flex-start;
     justify-content: center;
     padding-top: 0;
-    margin-top: -70px;
+    margin-top: -35px;
 }
 
 .hero-main-image{

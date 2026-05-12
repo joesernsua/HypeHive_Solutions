@@ -10,6 +10,22 @@
    <link rel="icon" type="image/png" href="./assets/images/favicon-rounded.png">
    <link rel="shortcut icon" type="image/png" href="./assets/images/favicon-rounded.png">
    <title>Service Application | HypeHive Solutions</title>
+   <script>
+      (function () {
+         var serviceValueToSlug = {
+            'Social Media Management': 'social-media-management',
+            'Content Creation': 'content-creation',
+            'Branding & Design': 'branding-design',
+            'Marketing Strategy': 'marketing-strategy'
+         };
+         var params = new URLSearchParams(window.location.search);
+         var service = params.get('service');
+
+         if (service) {
+            window.location.replace('./service-details.html?service=' + encodeURIComponent(serviceValueToSlug[service] || service));
+         }
+      })();
+   </script>
 </head>
 
 <body>
@@ -105,8 +121,6 @@
                               <button type="button" class="custom-select-option" data-value="Content Creation" role="option">Content Creation</button>
                               <button type="button" class="custom-select-option" data-value="Branding & Design" role="option">Branding &amp; Design</button>
                               <button type="button" class="custom-select-option" data-value="Marketing Strategy" role="option">Marketing Strategy</button>
-                              <button type="button" class="custom-select-option" data-value="Campaign Planning" role="option">Campaign Planning</button>
-                              <button type="button" class="custom-select-option" data-value="Engagement & Visibility" role="option">Engagement &amp; Visibility</button>
                            </div>
                         </div>
                         <p class="field-error" hidden>Please select a service.</p>
@@ -152,7 +166,7 @@
       </div>
    </footer>
 
-   <script src="./assets/js/script.js"></script>
+   <script src="./assets/js/script.js?v=20260512"></script>
 </body>
 
 </html>

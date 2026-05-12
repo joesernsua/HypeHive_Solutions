@@ -82,48 +82,6 @@ const services = {
             'Owners who want measurable online growth'
         ],
         outcome: 'The business gets a clearer marketing direction and knows what content to post, when to post, and what results to measure.'
-    },
-    'campaign-planning': {
-        category: 'Campaign Planning',
-        title: 'Campaign Planning',
-        image: './assets/images/Campaign%20Planning.png',
-        imageAlt: 'Campaign planning illustration',
-        intro: 'We organize marketing campaigns from idea to posting plan, helping businesses promote offers, launches, and events with clearer structure.',
-        value: 'Campaign Planning',
-        includes: [
-            'Campaign theme and message',
-            'Content calendar for the campaign period',
-            'Post, story, and reel ideas',
-            'Promotion call-to-action planning',
-            'Simple campaign KPI suggestions'
-        ],
-        bestFor: [
-            'New menu or product launches',
-            'Weekend promotions and festive campaigns',
-            'Brands that need a short-term marketing push'
-        ],
-        outcome: 'The business can run a more organized campaign with consistent messaging and clearer promotional goals.'
-    },
-    'engagement-visibility': {
-        category: 'Engagement & Visibility',
-        title: 'Engagement & Visibility',
-        image: './assets/images/Engagement%20%26%20Visibility.png',
-        imageAlt: 'Engagement and visibility illustration',
-        intro: 'We improve how easily customers notice, remember, and interact with a brand through engagement-focused content and platform activity.',
-        value: 'Engagement & Visibility',
-        includes: [
-            'Engagement post ideas',
-            'Story polls and Q&A concepts',
-            'Visibility-focused caption direction',
-            'Customer interaction suggestions',
-            'Basic engagement KPI tracking ideas'
-        ],
-        bestFor: [
-            'Businesses with low likes, comments, or shares',
-            'Brands that want more customer interaction',
-            'Pages that need stronger visibility and recognition'
-        ],
-        outcome: 'The business becomes easier to find, easier to trust, and more likely to receive interaction from potential customers.'
     }
 };
 
@@ -145,9 +103,11 @@ if (detailImage) {
 
 const applyLink = document.querySelector('#applyServiceLink');
 if (applyLink) {
-    applyLink.href = `./application.html?service=${encodeURIComponent(service.value)}#service-form`;
+    applyLink.href = '#service-form';
     applyLink.textContent = 'Apply Form';
 }
+
+window.HypeHiveCurrentServiceValue = service.value;
 
 const renderList = (selector, items) => {
     const list = document.querySelector(selector);
@@ -157,16 +117,18 @@ const renderList = (selector, items) => {
 renderList('#detailIncludes', service.includes);
 renderList('#detailBestFor', service.bestFor);
 
-const animatedElements = document.querySelectorAll([
+const detailAnimatedElements = document.querySelectorAll([
     '.back-link',
     '.service-single-copy',
     '.service-single-image-card',
     '.info-panel',
     '.section-heading',
-    '.goal-card'
+    '.goal-card',
+    '.service-form-card',
+    '.field-group'
 ].join(','));
 
-animatedElements.forEach((element, index) => {
+detailAnimatedElements.forEach((element, index) => {
     element.classList.add('reveal');
     if (element.matches('.service-single-image-card')) {
         element.classList.add('reveal-right');
@@ -186,7 +148,7 @@ if ('IntersectionObserver' in window) {
         });
     }, { threshold: 0.16 });
 
-    animatedElements.forEach(element => observer.observe(element));
+    detailAnimatedElements.forEach(element => observer.observe(element));
 } else {
-    animatedElements.forEach(element => element.classList.add('is-visible'));
+    detailAnimatedElements.forEach(element => element.classList.add('is-visible'));
 }

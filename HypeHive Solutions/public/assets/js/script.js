@@ -15,6 +15,25 @@ if (window.Swiper) {
     });
 }
 
+const serviceValueToSlug = {
+    'Social Media Management': 'social-media-management',
+    'Content Creation': 'content-creation',
+    'Branding & Design': 'branding-design',
+    'Marketing Strategy': 'marketing-strategy'
+};
+
+const serviceSlugToValue = Object.fromEntries(
+    Object.entries(serviceValueToSlug).map(([value, slug]) => [slug, value])
+);
+
+const pageParams = new URLSearchParams(window.location.search);
+const legacyApplicationService = pageParams.get('service');
+
+if (window.location.pathname.endsWith('/application.html') && legacyApplicationService) {
+    const serviceSlug = serviceValueToSlug[legacyApplicationService] || legacyApplicationService;
+    window.location.replace(`./service-details.html?service=${encodeURIComponent(serviceSlug)}`);
+}
+
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 anchor.addEventListener('click', function (e) {
     e.preventDefault();
@@ -190,9 +209,9 @@ document.querySelectorAll('.service-apply').forEach(button => {
     });
 });
 
-const selectedServiceFromDetails = new URLSearchParams(window.location.search).get('service');
+const selectedServiceFromDetails = pageParams.get('service');
 if (selectedServiceFromDetails) {
-    setCustomSelectValue('serviceSelect', selectedServiceFromDetails);
+    setCustomSelectValue('serviceSelect', serviceSlugToValue[selectedServiceFromDetails] || selectedServiceFromDetails);
 
     if (serviceFormSection && window.location.hash === '#service-form') {
         setTimeout(() => {
@@ -326,7 +345,7 @@ if (feedbackGrid && !feedbackGrid.dataset.marqueeReady) {
     feedbackGrid.dataset.marqueeReady = 'true';
 }
 
-const animatedElements = document.querySelectorAll([
+const globalAnimatedElements = document.querySelectorAll([
     '.hype-hero .hero-content',
     '.hero-main-image',
     '.audience-chips span',
@@ -355,7 +374,7 @@ const animatedElements = document.querySelectorAll([
     '.contact-panel'
 ].join(','));
 
-animatedElements.forEach((element, index) => {
+globalAnimatedElements.forEach((element, index) => {
     element.classList.add('reveal');
 
     if (element.matches('.hero-main-image, .brand-details, .feedback-heading, .contact-panel')) {
@@ -382,7 +401,7 @@ if ('IntersectionObserver' in window) {
         rootMargin: '0px 0px -70px 0px'
     });
 
-    animatedElements.forEach(element => revealObserver.observe(element));
+    globalAnimatedElements.forEach(element => revealObserver.observe(element));
 } else {
-    animatedElements.forEach(element => element.classList.add('is-visible'));
+    globalAnimatedElements.forEach(element => element.classList.add('is-visible'));
 }
