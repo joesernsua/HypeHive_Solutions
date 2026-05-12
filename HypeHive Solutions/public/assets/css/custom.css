@@ -860,6 +860,7 @@ nav.bg-white,
     line-height: 28px;
     text-decoration: none;
     width: fit-content;
+    transition: transform 0.2s ease, color 0.2s ease;
 }
 
 .service-learn-link span{
@@ -883,6 +884,14 @@ nav.bg-white,
 
 .service-learn-link:hover span{
     transform: translate(2px, -2px);
+}
+
+.service-learn-link:hover{
+    transform: translate(4px, -3px);
+}
+
+.service-learn-link:active{
+    transform: translate(2px, -1px);
 }
 
 .service-modern-dark .service-learn-link{
