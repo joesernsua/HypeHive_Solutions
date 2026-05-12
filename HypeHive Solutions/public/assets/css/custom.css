@@ -2956,11 +2956,20 @@ nav.bg-white,
 
     #about .info-panel{
         border-radius: 22px;
-        padding: 22px;
+        padding: 18px 20px 22px;
     }
 
     #about .info-panel h3{
         font-size: 24px;
+    }
+
+    .statement-image{
+        height: 180px;
+        margin-bottom: 16px;
+    }
+
+    #about .info-panel p{
+        line-height: 1.55;
     }
 
     .brand-logo-panel{
