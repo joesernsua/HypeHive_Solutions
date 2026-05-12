@@ -2885,6 +2885,10 @@ nav.bg-white,
         margin-bottom: 12px;
     }
 
+    .hero-content{
+        margin-top: -220px;
+    }
+
     .hero-main-visual{
         padding-top: 20px;
     }
