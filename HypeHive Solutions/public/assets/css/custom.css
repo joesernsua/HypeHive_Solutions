@@ -2880,6 +2880,15 @@ nav.bg-white,
         line-height: 1.1 !important;
     }
 
+    .hero-visual{
+        min-height: 300px;
+        margin-bottom: 12px;
+    }
+
+    .hero-main-visual{
+        padding-top: 20px;
+    }
+
     .hero-actions{
         align-items: stretch;
         flex-direction: column;
